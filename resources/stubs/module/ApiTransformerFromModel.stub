@@ -1,0 +1,62 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Transformers;
+
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+use App\Core\Parents\Transformers\ApiTransformer;
+use App\Core\Values\HATEOASLink;
+use App\Core\Values\Mutators\FilterMutator;
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+final class {{modelSingular}}ApiTransformer extends ApiTransformer
+{
+    {{properties}}
+
+    /**
+     * @param \App\Containers\{{containerName}}\Models\{{modelSingular}} ${{modelVariable}}
+     *
+     * @return array<string, mixed>
+     */
+    public function transform({{modelSingular}} ${{modelVariable}}): array
+    {
+        return [
+            {{transforms}}
+        ];
+    }
+
+    /**
+     * Get hateoas links.
+     *
+     * @param \App\Containers\{{containerName}}\Models\{{modelSingular}} ${{modelVariable}}
+     * @return \App\Core\Values\HATEOASLink[]
+     */
+    public function hateoas({{modelSingular}} ${{modelVariable}}): array
+    {
+        return [
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function sortFields(): array
+    {
+        return [
+            {{sortFields}}
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function filters(): array
+    {
+        return [
+            {{filters}}
+        ];
+    }
+}

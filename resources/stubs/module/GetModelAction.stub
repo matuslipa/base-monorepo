@@ -1,0 +1,35 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Actions;
+
+use App\Containers\{{containerName}}\Contracts\{{modelPlural}}RepositoryInterface;
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+use App\Core\Parents\Actions\Action;
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+final class Get{{modelSingular}}Action extends Action
+{
+    /**
+     * @param \App\Containers\{{containerName}}\Contracts\{{modelPlural}}RepositoryInterface ${{collectionVariable}}Repository
+     */
+    public function __construct(
+        private readonly {{modelPlural}}RepositoryInterface ${{collectionVariable}}Repository
+    ) {
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return \App\Containers\{{containerName}}\Models\{{modelSingular}}
+     *
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     */
+    public function run(int $id): {{modelSingular}}
+    {
+        return $this->{{collectionVariable}}Repository->get($id);
+    }
+}

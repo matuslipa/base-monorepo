@@ -1,0 +1,42 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Actions;
+
+use App\Containers\Logging\Services\AppActivityLogger;
+use App\Containers\Logging\Values\ActivityTypeEnum;
+use App\Containers\{{containerName}}\Contracts\{{modelPlural}}RepositoryInterface;
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+use App\Core\Parents\Actions\Action;
+use Illuminate\Database\DatabaseManager;
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+final class Delete{{modelSingular}}Action extends Action
+{
+    /**
+     * @param \App\Containers\{{containerName}}\Contracts\{{modelPlural}}RepositoryInterface ${{collectionVariable}}Repository
+     * @param \Illuminate\Database\DatabaseManager $databaseManager
+     * @param \App\Containers\Logging\Services\AppActivityLogger $activityLogger
+     */
+    public function __construct(
+        private readonly {{modelPlural}}RepositoryInterface ${{collectionVariable}}Repository,
+        private readonly DatabaseManager $databaseManager,
+        private readonly AppActivityLogger $activityLogger
+    ) {
+    }
+
+    /**
+     * @param \App\Containers\{{containerName}}\Models\{{modelSingular}} ${{modelVariable}}
+     * @throws \Throwable
+     */
+    public function run({{modelSingular}} ${{modelVariable}}): void
+    {
+        $this->databaseManager->transaction(function () use (${{modelVariable}}): void {
+            $this->activityLogger->createForModel(${{modelVariable}}, ActivityTypeEnum::MODEL_DELETED());
+            $this->{{collectionVariable}}Repository->delete(${{modelVariable}});
+        });
+    }
+}

@@ -1,0 +1,27 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Tests\Containers\{{namespace}};
+
+use App\Containers\{{namespace}}{{namespaceType}}{{className}};
+use App\Core\Parents\Tests\TestCase;
+
+final class {{className}}Test extends TestCase
+{
+    private {{className}} ${{classVariable}};
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->{{classVariable}} = $this->getApp()->make({{className}}::class);
+    }
+
+    /**
+     * @covers \App\Containers\{{namespace}}{{namespaceType}}{{className}}{{coveredMethod}}
+     */
+    public function test(): void
+    {
+
+    }
+}

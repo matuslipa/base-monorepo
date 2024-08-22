@@ -1,0 +1,1726 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Actions\\\\Customers\\\\GetAuthenticatedCustomerAction\\:\\:run\\(\\) should return App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer\\|null but returns App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer\\|App\\\\Containers\\\\Users\\\\Models\\\\User\\|App\\\\Models\\\\User\\|null\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Actions/Customers/GetAuthenticatedCustomerAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Actions\\\\Customers\\\\GetAuthenticatedCustomerActiveSessionsAction\\:\\:run\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Actions/Customers/GetAuthenticatedCustomerActiveSessionsAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Actions\\\\Users\\\\GetAuthenticatedUserAction\\:\\:run\\(\\) should return App\\\\Containers\\\\Users\\\\Models\\\\User\\|null but returns App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer\\|App\\\\Containers\\\\Users\\\\Models\\\\User\\|App\\\\Models\\\\User\\|null\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Actions/Users/GetAuthenticatedUserAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Actions\\\\Users\\\\GetAuthenticatedUserActiveSessionsAction\\:\\:run\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Actions/Users/GetAuthenticatedUserActiveSessionsAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Contracts\\\\CustomerSessionsRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Contracts/CustomerSessionsRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Contracts\\\\CustomerTokensRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Contracts/CustomerTokensRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Contracts\\\\UserSessionsRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Contracts/UserSessionsRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Contracts\\\\UserTokensRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Contracts/UserTokensRepositoryInterface.php
+
+		-
+			message: "#^Call to method hasPasswordExpirationEnabled\\(\\) on an unknown class App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Guards/UserGuard.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Guards\\\\UserGuard\\:\\:getProvider\\(\\) should return App\\\\Containers\\\\Authentication\\\\Providers\\\\AppUserProvider but returns Illuminate\\\\Contracts\\\\Auth\\\\UserProvider\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Guards/UserGuard.php
+
+		-
+			message: "#^Parameter \\#1 \\$twoFactorAuthenticable of method App\\\\Containers\\\\Authentication\\\\Guards\\\\UserGuard\\:\\:checkTwoFactorAuthentication\\(\\) expects App\\\\Containers\\\\TwoFactorAuthentication\\\\Contracts\\\\HasTwoFactorAuthenticationInterface, App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer\\|App\\\\Containers\\\\Users\\\\Models\\\\User\\|App\\\\Models\\\\User given\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Guards/UserGuard.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method App\\\\Containers\\\\Passwords\\\\UserPasswords\\\\Actions\\\\GetLatestUserPasswordAction\\:\\:run\\(\\) expects App\\\\Containers\\\\Users\\\\Models\\\\User\\|null, App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer\\|App\\\\Containers\\\\Users\\\\Models\\\\User\\|App\\\\Models\\\\User given\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Guards/UserGuard.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerSession\\:\\:customer\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Containers/Authentication/Models/CustomerSession.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerSession\\:\\:customerTokens\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Containers/Authentication/Models/CustomerSession.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerSession\\:\\:getActiveTokens\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Models/CustomerSession.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerSession\\:\\:getCustomerTokens\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Models/CustomerSession.php
+
+		-
+			message: "#^PHPDoc type array\\<string, mixed\\> of property App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerSession\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Models/CustomerSession.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerToken\\:\\:customerSession\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Containers/Authentication/Models/CustomerToken.php
+
+		-
+			message: "#^PHPDoc type array\\<string, mixed\\> of property App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerToken\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Models/CustomerToken.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Models\\\\UserSession\\:\\:getActiveTokens\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Models/UserSession.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Models\\\\UserSession\\:\\:getUserTokens\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Models/UserSession.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Models\\\\UserSession\\:\\:user\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Containers/Authentication/Models/UserSession.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Models\\\\UserSession\\:\\:userTokens\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Containers/Authentication/Models/UserSession.php
+
+		-
+			message: "#^PHPDoc type array\\<string, mixed\\> of property App\\\\Containers\\\\Authentication\\\\Models\\\\UserSession\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Models/UserSession.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Models\\\\UserToken\\:\\:userSession\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Containers/Authentication/Models/UserToken.php
+
+		-
+			message: "#^PHPDoc type array\\<string, mixed\\> of property App\\\\Containers\\\\Authentication\\\\Models\\\\UserToken\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Models/UserToken.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Repositories\\\\CustomerSessionsRepository\\:\\:findById\\(\\) should return App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerSession\\|null but returns App\\\\Core\\\\Parents\\\\Models\\\\Model\\|null\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Repositories/CustomerSessionsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Repositories\\\\CustomerSessionsRepository\\:\\:get\\(\\) should return App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerSession but returns App\\\\Core\\\\Parents\\\\Models\\\\Model\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Repositories/CustomerSessionsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Repositories\\\\CustomerSessionsRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Repositories/CustomerSessionsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Repositories\\\\CustomerTokensRepository\\:\\:findById\\(\\) should return App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerToken\\|null but returns App\\\\Core\\\\Parents\\\\Models\\\\Model\\|null\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Repositories/CustomerTokensRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Repositories\\\\CustomerTokensRepository\\:\\:get\\(\\) should return App\\\\Containers\\\\Authentication\\\\Models\\\\CustomerToken but returns App\\\\Core\\\\Parents\\\\Models\\\\Model\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Repositories/CustomerTokensRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Repositories\\\\CustomerTokensRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Repositories/CustomerTokensRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Repositories\\\\UserSessionsRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Repositories/UserSessionsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Repositories\\\\UserTokensRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Repositories/UserTokensRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Services\\\\AuthenticationService\\:\\:getCustomer\\(\\) should return App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer but returns App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer\\|App\\\\Containers\\\\Users\\\\Models\\\\User\\|App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Services/AuthenticationService.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Services\\\\AuthenticationService\\:\\:getShopUser\\(\\) should return App\\\\Containers\\\\Users\\\\Models\\\\User but returns App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer\\|App\\\\Containers\\\\Users\\\\Models\\\\User\\|App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: App/Containers/Authentication/Services/AuthenticationService.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authentication\\\\Transformers\\\\MeApiTransformer\\:\\:getModulesPermissionsForRoles\\(\\) has parameter \\$roles with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authentication/Transformers/MeApiTransformer.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Actions\\\\GetAllModulesAction\\:\\:run\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Actions/GetAllModulesAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Actions\\\\GetAllModulesForRoleAction\\:\\:run\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Actions/GetAllModulesForRoleAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Actions\\\\GetAllRolesAction\\:\\:run\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Actions/GetAllRolesAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Contracts\\\\ModulesRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Contracts/ModulesRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Contracts\\\\RolePermissionsRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Contracts/RolePermissionsRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Contracts\\\\RolesRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Contracts/RolesRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Models\\\\Module\\:\\:rolePermissions\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Containers/Authorization/Models/Module.php
+
+		-
+			message: "#^PHPDoc type array\\<string, mixed\\> of property App\\\\Containers\\\\Authorization\\\\Models\\\\Module\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Authorization/Models/Module.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Models\\\\Role\\:\\:permissions\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Containers/Authorization/Models/Role.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Models\\\\Role\\:\\:users\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Containers/Authorization/Models/Role.php
+
+		-
+			message: "#^PHPDoc type array\\<string, mixed\\> of property App\\\\Containers\\\\Authorization\\\\Models\\\\Role\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Authorization/Models/Role.php
+
+		-
+			message: "#^Trait App\\\\Core\\\\Traits\\\\Tests\\\\HasFactoryTrait uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: App/Containers/Authorization/Models/Role.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Models\\\\RolePermission\\:\\:module\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Containers/Authorization/Models/RolePermission.php
+
+		-
+			message: "#^PHPDoc type array\\<string, mixed\\> of property App\\\\Containers\\\\Authorization\\\\Models\\\\RolePermission\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Authorization/Models/RolePermission.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Repositories\\\\ModulesRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Repositories/ModulesRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Repositories\\\\RolePermissionsRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Repositories/RolePermissionsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Repositories\\\\RolesRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Repositories/RolesRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Services\\\\PermissionsResolver\\:\\:setDefaultPermissionToModules\\(\\) has parameter \\$modules with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Services/PermissionsResolver.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Services\\\\PermissionsResolver\\:\\:setUserRoles\\(\\) has parameter \\$roles with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Authorization/Services/PermissionsResolver.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Authorization\\\\Transformers\\\\ModuleApiTransformer\\:\\:transformModuleName\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: App/Containers/Authorization/Transformers/ModuleApiTransformer.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Customers\\\\Customers\\\\Actions\\\\GetAllCustomersAction\\:\\:run\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Customers/Customers/Actions/GetAllCustomersAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Customers\\\\Customers\\\\Contracts\\\\CustomersRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Customers/Customers/Contracts/CustomersRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer\\:\\:customerPasswordResets\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Containers/Customers/Customers/Models/Customer.php
+
+		-
+			message: "#^PHPDoc type array\\<string, mixed\\> of property App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Customers/Customers/Models/Customer.php
+
+		-
+			message: "#^Trait App\\\\Core\\\\Traits\\\\Tests\\\\HasFactoryTrait uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: App/Containers/Customers/Customers/Models/Customer.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Customers\\\\Customers\\\\Repositories\\\\CustomersRepository\\:\\:findByEmail\\(\\) should return App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer\\|null but returns App\\\\Core\\\\Parents\\\\Models\\\\Model\\|null\\.$#"
+			count: 1
+			path: App/Containers/Customers/Customers/Repositories/CustomersRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Customers\\\\Customers\\\\Repositories\\\\CustomersRepository\\:\\:get\\(\\) should return App\\\\Containers\\\\Customers\\\\Customers\\\\Models\\\\Customer but returns App\\\\Core\\\\Parents\\\\Models\\\\Model\\.$#"
+			count: 1
+			path: App/Containers/Customers/Customers/Repositories/CustomersRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Customers\\\\Customers\\\\Repositories\\\\CustomersRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Customers/Customers/Repositories/CustomersRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Files\\\\Contracts\\\\ImagesRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Files/Contracts/ImagesRepositoryInterface.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property App\\\\Containers\\\\Files\\\\Models\\\\Image\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Files/Models/Image.php
+
+		-
+			message: "#^Trait App\\\\Core\\\\Traits\\\\Tests\\\\HasFactoryTrait uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: App/Containers/Files/Models/Image.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Files\\\\Repositories\\\\ImagesRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Files/Repositories/ImagesRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Files\\\\Values\\\\ImageRelationshipDefinition\\:\\:getRelationship\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Containers/Files/Values/ImageRelationshipDefinition.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Actions\\\\Currencies\\\\GetAllCurrenciesAction\\:\\:getCollection\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Actions/Currencies/GetAllCurrenciesAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Actions\\\\Languages\\\\GetAllLanguagesAction\\:\\:getCollection\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Actions/Languages/GetAllLanguagesAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Contracts\\\\CountriesRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Contracts/CountriesRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Contracts\\\\CurrenciesRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Contracts/CurrenciesRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Contracts\\\\CurrencyDefinitionsRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Contracts/CurrencyDefinitionsRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Contracts\\\\LanguageDefinitionsRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Contracts/LanguageDefinitionsRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Contracts\\\\LanguagesRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Contracts/LanguagesRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Models\\\\Country\\:\\:currencyDefinition\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/Country.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Models\\\\Country\\:\\:languageDefinition\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/Country.php
+
+		-
+			message: "#^PHPDoc type array\\<string, mixed\\> of property App\\\\Containers\\\\Internationalization\\\\Models\\\\Country\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/Country.php
+
+		-
+			message: "#^PHPDoc type array of property App\\\\Containers\\\\Internationalization\\\\Models\\\\Currency\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/Currency.php
+
+		-
+			message: "#^Property App\\\\Containers\\\\Internationalization\\\\Models\\\\Currency\\:\\:\\$casts type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/Currency.php
+
+		-
+			message: "#^Trait App\\\\Core\\\\Traits\\\\Tests\\\\HasFactoryTrait uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/Currency.php
+
+		-
+			message: "#^PHPDoc type array of property App\\\\Containers\\\\Internationalization\\\\Models\\\\CurrencyDefinition\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/CurrencyDefinition.php
+
+		-
+			message: "#^Property App\\\\Containers\\\\Internationalization\\\\Models\\\\CurrencyDefinition\\:\\:\\$casts type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/CurrencyDefinition.php
+
+		-
+			message: "#^PHPDoc type array of property App\\\\Containers\\\\Internationalization\\\\Models\\\\Language\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/Language.php
+
+		-
+			message: "#^Property App\\\\Containers\\\\Internationalization\\\\Models\\\\Language\\:\\:\\$casts type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/Language.php
+
+		-
+			message: "#^Trait App\\\\Core\\\\Traits\\\\Tests\\\\HasFactoryTrait uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: App/Containers/Internationalization/Models/Language.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Repositories\\\\CountriesRepository\\:\\:get\\(\\) should return App\\\\Containers\\\\Internationalization\\\\Models\\\\Country but returns App\\\\Core\\\\Parents\\\\Models\\\\Model\\.$#"
+			count: 1
+			path: App/Containers/Internationalization/Repositories/CountriesRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Repositories\\\\CountriesRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Repositories/CountriesRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Repositories\\\\CurrenciesRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Repositories/CurrenciesRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Repositories\\\\CurrencyDefinitionsRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Repositories/CurrencyDefinitionsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Repositories\\\\LanguageDefinitionsRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Repositories/LanguageDefinitionsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Internationalization\\\\Repositories\\\\LanguagesRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Internationalization/Repositories/LanguagesRepository.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<\\(int\\|string\\),Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:each\\(\\) expects callable\\(Illuminate\\\\Database\\\\Eloquent\\\\Model, int\\|string\\)\\: mixed, Closure\\(App\\\\Containers\\\\Logging\\\\Models\\\\ActivityLog\\)\\: void given\\.$#"
+			count: 1
+			path: App/Containers/Logging/Actions/DeleteOldActivityLogsAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Logging\\\\Actions\\\\GetAllActivityLogsAction\\:\\:run\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Logging/Actions/GetAllActivityLogsAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Logging\\\\Contracts\\\\ActivityLogsRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Logging/Contracts/ActivityLogsRepositoryInterface.php
+
+		-
+			message: "#^PHPDoc type array of property App\\\\Containers\\\\Logging\\\\Models\\\\ActivityLog\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Logging/Models/ActivityLog.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Logging\\\\Repositories\\\\ActivityLogsRepository\\:\\:get\\(\\) should return App\\\\Containers\\\\Logging\\\\Models\\\\ActivityLog but returns App\\\\Core\\\\Parents\\\\Models\\\\Model\\.$#"
+			count: 1
+			path: App/Containers/Logging/Repositories/ActivityLogsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Logging\\\\Repositories\\\\ActivityLogsRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Logging/Repositories/ActivityLogsRepository.php
+
+		-
+			message: "#^Dead catch \\- ReflectionException is never thrown in the try block\\.$#"
+			count: 1
+			path: App/Containers/Modules/Values/ModuleDefinitions.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function call_user_func expects callable\\(\\)\\: mixed, array\\{'App\\\\\\\\Containers\\\\\\\\Modules\\\\\\\\Values\\\\\\\\ModuleDefinitions', non\\-empty\\-string\\} given\\.$#"
+			count: 1
+			path: App/Containers/Modules/Values/ModuleDefinitions.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\Customers\\\\Contracts\\\\CustomerPasswordResetsRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Passwords/Customers/Contracts/CustomerPasswordResetsRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\Customers\\\\Models\\\\CustomerPasswordReset\\:\\:customer\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Containers/Passwords/Customers/Models/CustomerPasswordReset.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property App\\\\Containers\\\\Passwords\\\\Customers\\\\Models\\\\CustomerPasswordReset\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Passwords/Customers/Models/CustomerPasswordReset.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\Customers\\\\Repositories\\\\CustomerPasswordResetsRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Passwords/Customers/Repositories/CustomerPasswordResetsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\UserPasswords\\\\Actions\\\\GetAllUserPasswordsAction\\:\\:run\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Actions/GetAllUserPasswordsAction.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<\\(int\\|string\\),Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:each\\(\\) expects callable\\(Illuminate\\\\Database\\\\Eloquent\\\\Model, int\\|string\\)\\: mixed, Closure\\(App\\\\Containers\\\\Users\\\\Models\\\\User\\)\\: void given\\.$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Actions/SendPasswordExpirationReminderEmailsAction.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<\\(int\\|string\\),Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:sortByDesc\\(\\) expects array\\<array\\{string, string\\}\\|\\(callable\\(Illuminate\\\\Database\\\\Eloquent\\\\Model, Illuminate\\\\Database\\\\Eloquent\\\\Model\\)\\: mixed\\)\\|\\(callable\\(Illuminate\\\\Database\\\\Eloquent\\\\Model, int\\|string\\)\\: mixed\\)\\|string\\>\\|\\(callable\\(Illuminate\\\\Database\\\\Eloquent\\\\Model, int\\|string\\)\\: mixed\\)\\|string, Closure\\(App\\\\Containers\\\\Passwords\\\\UserPasswords\\\\Models\\\\UserPassword\\)\\: Carbon\\\\CarbonImmutable given\\.$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Actions/SendPasswordExpirationReminderEmailsAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\UserPasswords\\\\Contracts\\\\UserPasswordsRepositoryInterface\\:\\:findByUser\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Contracts/UserPasswordsRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\UserPasswords\\\\Contracts\\\\UserPasswordsRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Contracts/UserPasswordsRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\UserPasswords\\\\Models\\\\UserPassword\\:\\:user\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Models/UserPassword.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property App\\\\Containers\\\\Passwords\\\\UserPasswords\\\\Models\\\\UserPassword\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Models/UserPassword.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property App\\\\Containers\\\\Passwords\\\\UserPasswords\\\\Models\\\\UserPassword\\:\\:\\$hidden is not covariant with PHPDoc type array\\<int, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$hidden\\.$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Models/UserPassword.php
+
+		-
+			message: "#^Trait App\\\\Core\\\\Traits\\\\Tests\\\\HasFactoryTrait uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Models/UserPassword.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\UserPasswords\\\\Repositories\\\\UserPasswordsRepository\\:\\:findByUser\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Repositories/UserPasswordsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\UserPasswords\\\\Repositories\\\\UserPasswordsRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Passwords/UserPasswords/Repositories/UserPasswordsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\Users\\\\Contracts\\\\UserPasswordResetsRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Passwords/Users/Contracts/UserPasswordResetsRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\Users\\\\Models\\\\UserPasswordReset\\:\\:user\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Containers/Passwords/Users/Models/UserPasswordReset.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property App\\\\Containers\\\\Passwords\\\\Users\\\\Models\\\\UserPasswordReset\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Passwords/Users/Models/UserPasswordReset.php
+
+		-
+			message: "#^Trait App\\\\Core\\\\Traits\\\\Tests\\\\HasFactoryTrait uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: App/Containers/Passwords/Users/Models/UserPasswordReset.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Passwords\\\\Users\\\\Repositories\\\\UserPasswordResetsRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Passwords/Users/Repositories/UserPasswordResetsRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Users\\\\Actions\\\\GetAllUsersAction\\:\\:run\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Users/Actions/GetAllUsersAction.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Users\\\\Contracts\\\\UsersRepositoryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Users/Contracts/UsersRepositoryInterface.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Users\\\\Models\\\\User\\:\\:getRoles\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Collection does not specify its types\\: TKey, TModel$#"
+			count: 1
+			path: App/Containers/Users/Models/User.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Users\\\\Models\\\\User\\:\\:getUserPasswords\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Collection does not specify its types\\: TKey, TModel$#"
+			count: 1
+			path: App/Containers/Users/Models/User.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Users\\\\Models\\\\User\\:\\:roles\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Containers/Users/Models/User.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Users\\\\Models\\\\User\\:\\:userPasswordResets\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Containers/Users/Models/User.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Users\\\\Models\\\\User\\:\\:userPasswords\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Containers/Users/Models/User.php
+
+		-
+			message: "#^PHPDoc type array\\<string\\> of property App\\\\Containers\\\\Users\\\\Models\\\\User\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: App/Containers/Users/Models/User.php
+
+		-
+			message: "#^Trait App\\\\Core\\\\Traits\\\\Tests\\\\HasFactoryTrait uses generic trait Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\HasFactory but does not specify its types\\: TFactory$#"
+			count: 1
+			path: App/Containers/Users/Models/User.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Users\\\\Repositories\\\\UsersRepository\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Users/Repositories/UsersRepository.php
+
+		-
+			message: "#^Method App\\\\Containers\\\\Web\\\\Services\\\\WebFallbackHandlers\\\\WebFallbackHandler\\:\\:getHandlers\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Containers/Web/Services/WebFallbackHandlers/WebFallbackHandler.php
+
+		-
+			message: "#^Class App\\\\Core\\\\Casts\\\\DecimalCast implements generic interface Illuminate\\\\Contracts\\\\Database\\\\Eloquent\\\\CastsAttributes but does not specify its types\\: TGet, TSet$#"
+			count: 1
+			path: App/Core/Casts/DecimalCast.php
+
+		-
+			message: "#^Class App\\\\Core\\\\Casts\\\\InstantiableEnumCast implements generic interface Illuminate\\\\Contracts\\\\Database\\\\Eloquent\\\\CastsAttributes but does not specify its types\\: TGet, TSet$#"
+			count: 1
+			path: App/Core/Casts/InstantiableEnumCast.php
+
+		-
+			message: "#^Class App\\\\Core\\\\Casts\\\\MonetaryAttributeCast implements generic interface Illuminate\\\\Contracts\\\\Database\\\\Eloquent\\\\CastsAttributes but does not specify its types\\: TGet, TSet$#"
+			count: 1
+			path: App/Core/Casts/MonetaryAttributeCast.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Commands\\\\GenerateFeModelCommand\\:\\:getEmbeds\\(\\) has parameter \\$reflectionClass with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: App/Core/Commands/GenerateFeModelCommand.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Commands\\\\GenerateFeModelCommand\\:\\:getProps\\(\\) has parameter \\$reflectionClass with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: App/Core/Commands/GenerateFeModelCommand.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Commands\\\\MakeApiTransformerCommand\\:\\:createApiTransformer\\(\\) has parameter \\$modelReflectionClass with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: App/Core/Commands/MakeApiTransformerCommand.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Commands\\\\MakeApiTransformerCommand\\:\\:getModelReflectionClass\\(\\) return type with generic class ReflectionClass does not specify its types\\: T$#"
+			count: 1
+			path: App/Core/Commands/MakeApiTransformerCommand.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Commands\\\\MakeFactoryCommand\\:\\:createFactory\\(\\) has parameter \\$modelReflectionClass with generic class ReflectionClass but does not specify its types\\: T$#"
+			count: 1
+			path: App/Core/Commands/MakeFactoryCommand.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Commands\\\\MakeFactoryCommand\\:\\:getModelReflectionClass\\(\\) return type with generic class ReflectionClass does not specify its types\\: T$#"
+			count: 1
+			path: App/Core/Commands/MakeFactoryCommand.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\HasMonetaryAttributesInterface\\:\\:amounts\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Core/Contracts/HasMonetaryAttributesInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\HasMultilingualAttributesInterface\\:\\:translations\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Core/Contracts/HasMultilingualAttributesInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\ModelInterface\\:\\:getKey\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Contracts/ModelInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\QueryBuilderInterface\\:\\:findByIds\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Contracts/QueryBuilderInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\QueryBuilderInterface\\:\\:getByIds\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Contracts/QueryBuilderInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\QueryBuilderInterface\\:\\:getOnly\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Contracts/QueryBuilderInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\QueryBuilderInterface\\:\\:getOnlyKeys\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Contracts/QueryBuilderInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\QueryBuilderInterface\\:\\:pluckKeys\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Contracts/QueryBuilderInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\QueryBuilderInterface\\:\\:wherePrimaryKey\\(\\) has parameter \\$id with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Contracts/QueryBuilderInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\QueryBuilderInterface\\:\\:wherePrimaryKeyNot\\(\\) has parameter \\$id with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Contracts/QueryBuilderInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Contracts\\\\QueryInterface\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Contracts/QueryInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Helpers\\\\ApiDataTypesTransformer\\:\\:transformMonetaryAttribute\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Helpers/ApiDataTypesTransformer.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Helpers\\\\ApiDataTypesTransformer\\:\\:transformMultilingualAttribute\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Helpers/ApiDataTypesTransformer.php
+
+		-
+			message: "#^Parameter \\#1 \\$date of static method App\\\\Core\\\\Helpers\\\\ApiDataTypesTransformer\\:\\:transformDate\\(\\) expects Carbon\\\\CarbonImmutable\\|null, Carbon\\\\CarbonInterface\\|null given\\.$#"
+			count: 2
+			path: App/Core/Helpers/ApiDataTypesTransformer.php
+
+		-
+			message: "#^Parameter \\#1 \\$date of static method App\\\\Core\\\\Helpers\\\\FrontDataTypesTransformer\\:\\:transformDate\\(\\) expects Carbon\\\\CarbonImmutable\\|null, Carbon\\\\CarbonInterface\\|null given\\.$#"
+			count: 2
+			path: App/Core/Helpers/FrontDataTypesTransformer.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method App\\\\Core\\\\Values\\\\Decimal\\:\\:div\\(\\) expects App\\\\Core\\\\Values\\\\Decimal\\|int\\|string, App\\\\Core\\\\Values\\\\Decimal\\|int\\|null given\\.$#"
+			count: 1
+			path: App/Core/Helpers/MonetaryCalculator.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method App\\\\Core\\\\Values\\\\Decimal\\:\\:mul\\(\\) expects App\\\\Core\\\\Values\\\\Decimal\\|int\\|string, App\\\\Core\\\\Values\\\\Decimal\\|int\\|null given\\.$#"
+			count: 1
+			path: App/Core/Helpers/MonetaryCalculator.php
+
+		-
+			message: "#^Parameter \\#2 \\$value of method App\\\\Core\\\\Values\\\\MonetaryAttribute\\:\\:put\\(\\) expects App\\\\Core\\\\Values\\\\AttributeAmount\\|string\\|null, App\\\\Core\\\\Values\\\\Decimal given\\.$#"
+			count: 7
+			path: App/Core/Helpers/MonetaryCalculator.php
+
+		-
+			message: "#^Method Illuminate\\\\Database\\\\Query\\\\Expression\\:\\:getValue\\(\\) invoked with 0 parameters, 1 required\\.$#"
+			count: 1
+			path: App/Core/Helpers/QueryUtils.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Helpers\\\\Testing\\\\ResourceStructure\\:\\:of\\(\\) has parameter \\$objectStructure with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Helpers/Testing/ResourceStructure.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Helpers\\\\Testing\\\\ResourceStructure\\:\\:of\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Helpers/Testing/ResourceStructure.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Helpers\\\\Testing\\\\ResourceStructure\\:\\:ofNothing\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Helpers/Testing/ResourceStructure.php
+
+		-
+			message: "#^Cannot access offset mixed on RecursiveIteratorIterator\\<RecursiveArrayIterator\\<\\(int\\|string\\), mixed\\>\\>\\.$#"
+			count: 1
+			path: App/Core/Helpers/Utils.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Helpers\\\\Utils\\:\\:recursiveFind\\(\\) has parameter \\$haystack with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Helpers/Utils.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Helpers\\\\Utils\\:\\:recursivePregFindAll\\(\\) has parameter \\$haystack with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Helpers/Utils.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Helpers\\\\Utils\\:\\:recursivePregFindAll\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Helpers/Utils.php
+
+		-
+			message: "#^Call to method getAuthIdentifier\\(\\) on an unknown class App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: App/Core/Middlewares/ThrottleRequestsMiddleware.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Middlewares\\\\ThrottleRequestsMiddleware\\:\\:buildException\\(\\) has parameter \\$responseCallback with no type specified\\.$#"
+			count: 1
+			path: App/Core/Middlewares/ThrottleRequestsMiddleware.php
+
+		-
+			message: "#^Parameter \\#4 \\$limiter of method App\\\\Core\\\\Middlewares\\\\ThrottleRequestsMiddleware\\:\\:handleRequestUsingNamedLimiter\\(\\) expects Closure, Closure\\|null given\\.$#"
+			count: 1
+			path: App/Core/Middlewares/ThrottleRequestsMiddleware.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Models\\\\AmountsModel\\:\\:getAllFor\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Models/AmountsModel.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Models\\\\TranslationModel\\:\\:getAllFor\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Models/TranslationModel.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Controllers\\\\ApiController\\:\\:collectionResponse\\(\\) has parameter \\$collection with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Controllers/ApiController.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Enums\\\\InstantiableEnum\\:\\:__callStatic\\(\\) has parameter \\$arguments with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Enums/InstantiableEnum.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Enums\\\\InstantiableEnum\\:\\:constants\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Enums/InstantiableEnum.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Enums\\\\InstantiableEnum\\:\\:keys\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Enums/InstantiableEnum.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Enums\\\\InstantiableEnum\\:\\:toArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Enums/InstantiableEnum.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Enums\\\\InstantiableEnum\\:\\:values\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Enums/InstantiableEnum.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Enums/InstantiableEnum.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function call_user_func expects callable\\(\\)\\: mixed, array\\{class\\-string\\<static\\(App\\\\Core\\\\Parents\\\\Enums\\\\InstantiableEnum\\)\\>, 'labels'\\} given\\.$#"
+			count: 1
+			path: App/Core/Parents/Enums/InstantiableEnum.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 2
+			path: App/Core/Parents/Enums/InstantiableEnum.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Exceptions\\\\Exception\\:\\:setErrors\\(\\) should return App\\\\Core\\\\Exceptions\\\\ValidationException but returns \\$this\\(App\\\\Core\\\\Parents\\\\Exceptions\\\\Exception\\)\\.$#"
+			count: 1
+			path: App/Core/Parents/Exceptions/Exception.php
+
+		-
+			message: "#^If condition is always false\\.$#"
+			count: 1
+			path: App/Core/Parents/Models/Model.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Models\\\\Model\\:\\:getRelationInstance\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Core/Parents/Models/Model.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Models\\\\Model\\:\\:setKeysForSaveQuery\\(\\) has parameter \\$query with generic class Illuminate\\\\Database\\\\Eloquent\\\\Builder but does not specify its types\\: TModelClass$#"
+			count: 1
+			path: App/Core/Parents/Models/Model.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Models\\\\Model\\:\\:setKeysForSaveQuery\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Builder does not specify its types\\: TModelClass$#"
+			count: 1
+			path: App/Core/Parents/Models/Model.php
+
+		-
+			message: "#^Return type \\(App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\) of method App\\\\Core\\\\Parents\\\\Models\\\\Model\\:\\:newModelQuery\\(\\) should be compatible with return type \\(Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<static\\(Illuminate\\\\Database\\\\Eloquent\\\\Model\\)\\>\\) of method Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:newModelQuery\\(\\)$#"
+			count: 1
+			path: App/Core/Parents/Models/Model.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Models\\\\SeoModel\\:\\:ogImage\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Core/Parents/Models/SeoModel.php
+
+		-
+			message: "#^Binary operation \"\\.\" between Illuminate\\\\Database\\\\Query\\\\Expression\\|string and '\\.\\*' results in an error\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation\\<\\*, \\*, \\*\\>\\:\\:getModel\\(\\)\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Class App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder extends generic class Illuminate\\\\Database\\\\Eloquent\\\\Builder but does not specify its types\\: TModelClass$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:eagerLoadRelation\\(\\) should return array\\<App\\\\Core\\\\Parents\\\\Models\\\\Model\\> but returns array\\<int, TDeclaringModel of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:findByIds\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:getAll\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:getByIds\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:getOnly\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:getOnlyKeys\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:pluckKeys\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:wherePrimaryKey\\(\\) has parameter \\$id with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:wherePrimaryKeyGt\\(\\) should return \\$this\\(App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\) but returns static\\(App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\)\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:wherePrimaryKeyGte\\(\\) should return \\$this\\(App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\) but returns static\\(App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\)\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:wherePrimaryKeyLt\\(\\) should return \\$this\\(App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\) but returns static\\(App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\)\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:wherePrimaryKeyLte\\(\\) should return \\$this\\(App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\) but returns static\\(App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\)\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\:\\:wherePrimaryKeyNot\\(\\) has parameter \\$id with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^PHPDoc tag @var for variable \\$collection contains generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Parameter \\#1 \\$array of function array_filter expects array, array\\|null given\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Parameter \\#1 \\$column of method Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:where\\(\\) expects array\\<int\\|string, mixed\\>\\|\\(Closure\\(Illuminate\\\\Database\\\\Eloquent\\\\Builder\\)\\: Illuminate\\\\Database\\\\Eloquent\\\\Builder\\)\\|\\(Closure\\(Illuminate\\\\Database\\\\Eloquent\\\\Builder\\)\\: void\\)\\|Illuminate\\\\Contracts\\\\Database\\\\Query\\\\Expression\\|string, Closure\\(App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder\\)\\: void given\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Parameter \\#1 \\$models of method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:addEagerConstraints\\(\\) expects array\\<int, TDeclaringModel of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>, array\\<class\\-string\\> given\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Parameter \\#1 \\$models of method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:initRelation\\(\\) expects array\\<int, TDeclaringModel of Illuminate\\\\Database\\\\Eloquent\\\\Model\\>, array\\<class\\-string\\> given\\.$#"
+			count: 1
+			path: App/Core/Parents/Queries/QueryBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:apiDelete\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:apiGet\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:apiGetBuilder\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:apiPatch\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:apiPatch\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:apiPost\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:apiPost\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:apiPostFile\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:apiPut\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:apiPut\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:json\\(\\) has parameter \\$data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Tests\\\\ApiTestCase\\:\\:json\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/ApiTestCase.php
+
+		-
+			message: "#^Call to an undefined method App\\\\Containers\\\\Authentication\\\\Actions\\\\ResolveJWTSessionSigningKeyAction\\:\\:run\\(\\)\\.$#"
+			count: 1
+			path: App/Core/Parents/Tests/FrontTestCase.php
+
+		-
+			message: "#^Cannot call method toJWToken\\(\\) on App\\\\Containers\\\\Authentication\\\\Models\\\\UserToken\\|null\\.$#"
+			count: 2
+			path: App/Core/Parents/Tests/FrontTestCase.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Parents\\\\Transformers\\\\ApiTransformer\\:\\:transformFinalCollection\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Parents/Transformers/ApiTransformer.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of static method Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:guessFactoryNamesUsing\\(\\) expects callable\\(class\\-string\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\)\\: class\\-string\\<Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory\\>, Closure\\(string\\)\\: non\\-falsy\\-string given\\.$#"
+			count: 1
+			path: App/Core/Providers/AppServiceProvider.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseBuilder\\:\\:fetchData\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseBuilder\\:\\:getCollectionData\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseBuilder\\:\\:getCollectionDataWithoutTransformation\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseBuilder\\:\\:getQueryData\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseBuilder\\:\\:makeForCollection\\(\\) has parameter \\$collection with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseBuilder\\:\\:paginateDataPostFetch\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseBuilder\\:\\:paginateDataPostFetch\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseBuilder\\:\\:setSourceCollection\\(\\) has parameter \\$collection with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseBuilder.php
+
+		-
+			message: "#^PHPDoc tag @var for variable \\$item contains generic interface Illuminate\\\\Contracts\\\\Support\\\\Arrayable but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseBuilder.php
+
+		-
+			message: "#^Property App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseBuilder\\:\\:\\$sourceCollection with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseBuilder.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseFactory\\:\\:makeCollectionResponse\\(\\) has parameter \\$collection with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseFactory.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseFactory\\:\\:makeQueryCollectionResponse\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseFactory.php
+
+		-
+			message: "#^Parameter \\#1 \\$queryBuilder of method App\\\\Core\\\\Services\\\\ApiResponseFactory\\\\ApiResponseBuilder\\:\\:makeForQuery\\(\\) expects App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder, App\\\\Core\\\\Contracts\\\\QueryBuilderInterface given\\.$#"
+			count: 1
+			path: App/Core/Services/ApiResponseFactory/ApiResponseFactory.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\CacheRepository\\\\WebCacheRepository\\:\\:deleteMultiple\\(\\) has parameter \\$keys with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: App/Core/Services/CacheRepository/WebCacheRepository.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\CacheRepository\\\\WebCacheRepository\\:\\:getMultiple\\(\\) has parameter \\$keys with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: App/Core/Services/CacheRepository/WebCacheRepository.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\CacheRepository\\\\WebCacheRepository\\:\\:getMultiple\\(\\) return type has no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: App/Core/Services/CacheRepository/WebCacheRepository.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\CacheRepository\\\\WebCacheRepository\\:\\:pull\\(\\) has parameter \\$key with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/CacheRepository/WebCacheRepository.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\CacheRepository\\\\WebCacheRepository\\:\\:setMultiple\\(\\) has parameter \\$values with no value type specified in iterable type iterable\\.$#"
+			count: 1
+			path: App/Core/Services/CacheRepository/WebCacheRepository.php
+
+		-
+			message: "#^Parameter \\#1 \\$key of method App\\\\Core\\\\Services\\\\CacheRepository\\\\WebCacheRepository\\:\\:alterKey\\(\\) expects string, array\\|string given\\.$#"
+			count: 1
+			path: App/Core/Services/CacheRepository/WebCacheRepository.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface\\:\\:ancestors\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/ClosureTableModelInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface\\:\\:ancestorsAndSelf\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/ClosureTableModelInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface\\:\\:children\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/ClosureTableModelInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface\\:\\:descendants\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsToMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/ClosureTableModelInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface\\:\\:parent\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/ClosureTableModelInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface\\:\\:siblings\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/ClosureTableModelInterface.php
+
+		-
+			message: "#^Class App\\\\Core\\\\Services\\\\ClosureTable\\\\Collection extends generic class Illuminate\\\\Database\\\\Eloquent\\\\Collection but does not specify its types\\: TKey, TModel$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/Collection.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<\\(int\\|string\\),Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:map\\(\\) expects callable\\(Illuminate\\\\Database\\\\Eloquent\\\\Model, int\\|string\\)\\: mixed, Closure\\(App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface\\)\\: mixed given\\.$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/Collection.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<\\(int\\|string\\),Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:each\\(\\) expects callable\\(Illuminate\\\\Database\\\\Eloquent\\\\Model, int\\|string\\)\\: mixed, Closure\\(App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface\\)\\: void given\\.$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/Collection.php
+
+		-
+			message: "#^Parameter \\#1 \\$items of class App\\\\Core\\\\Services\\\\ClosureTable\\\\Collection constructor expects Illuminate\\\\Contracts\\\\Support\\\\Arrayable\\<\\(int\\|string\\), Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|iterable\\<\\(int\\|string\\), Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|null, array\\<int\\<0, max\\>, App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface\\> given\\.$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/Collection.php
+
+		-
+			message: "#^Parameter \\#1 \\$items of class App\\\\Core\\\\Services\\\\ClosureTable\\\\Collection constructor expects Illuminate\\\\Contracts\\\\Support\\\\Arrayable\\<\\(int\\|string\\), Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|iterable\\<\\(int\\|string\\), Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|null, array\\{App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface\\} given\\.$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/Collection.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$values of method Illuminate\\\\Support\\\\Collection\\<\\(int\\|string\\),Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:push\\(\\) expects Illuminate\\\\Database\\\\Eloquent\\\\Model, App\\\\Core\\\\Services\\\\ClosureTable\\\\ClosureTableModelInterface given\\.$#"
+			count: 1
+			path: App/Core/Services/ClosureTable/Collection.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Contracts\\\\FilterMutatorWithCustomHandlingInterface\\:\\:filterCollectionData\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Contracts/FilterMutatorWithCustomHandlingInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Contracts\\\\FilterMutatorWithCustomHandlingInterface\\:\\:filterCollectionData\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Contracts/FilterMutatorWithCustomHandlingInterface.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\DataEmbeddingHandler\\:\\:applyCollectionLoaders\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/DataEmbeddingHandler.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\DataFilteringHandler\\:\\:filterDataCollection\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/DataFilteringHandler.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\DataFilteringHandler\\:\\:filterDataCollection\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/DataFilteringHandler.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\DataSearchingHandler\\:\\:searchDataCollection\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/DataSearchingHandler.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\DataSearchingHandler\\:\\:searchDataCollection\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/DataSearchingHandler.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\DataSortingHandler\\:\\:sortDataCollection\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/DataSortingHandler.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\DataSortingHandler\\:\\:sortDataCollection\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/DataSortingHandler.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\DataTransformationHandler\\:\\:transformCollection\\(\\) has parameter \\$items with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/DataTransformationHandler.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\DataTransformationHandler\\:\\:transformCollection\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/DataTransformationHandler.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Filtering\\\\FilterRule\\:\\:filterDataCollection\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Filtering/FilterRule.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Filtering\\\\FilterRule\\:\\:filterDataCollection\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Filtering/FilterRule.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Filtering\\\\Mutators\\\\ComposedFilterMutator\\:\\:filterCollectionData\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Filtering/Mutators/ComposedFilterMutator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Filtering\\\\Mutators\\\\ComposedFilterMutator\\:\\:filterCollectionData\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Filtering/Mutators/ComposedFilterMutator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Filtering\\\\Mutators\\\\CustomFilterMutator\\:\\:filterCollectionData\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Filtering/Mutators/CustomFilterMutator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Filtering\\\\Mutators\\\\CustomFilterMutator\\:\\:filterCollectionData\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Filtering/Mutators/CustomFilterMutator.php
+
+		-
+			message: "#^Parameter \\#1 \\$date of method Carbon\\\\CarbonImmutable\\:\\:ne\\(\\) expects DateTimeInterface\\|string, Carbon\\\\CarbonImmutable\\|null given\\.$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Filtering/Mutators/DateFilterMutator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Filtering\\\\Mutators\\\\NestedFilterMutator\\:\\:filterCollectionData\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Filtering/Mutators/NestedFilterMutator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Filtering\\\\Mutators\\\\NestedFilterMutator\\:\\:filterCollectionData\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Filtering/Mutators/NestedFilterMutator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\DataHandler\\\\Sorting\\\\SortItem\\:\\:getValueResolver\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Services/DataHandler/Sorting/SortItem.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between int and null will always evaluate to false\\.$#"
+			count: 1
+			path: App/Core/Services/ModelPositionReOrganizer.php
+
+		-
+			message: "#^Call to method getAuthIdentifier\\(\\) on an unknown class App\\\\Models\\\\User\\.$#"
+			count: 1
+			path: App/Core/Services/RequestThrottleService/FrontRateLimiter.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestThrottleService\\\\FrontRateLimiter\\:\\:setResponseHeaders\\(\\) has parameter \\$retryAfter with no type specified\\.$#"
+			count: 1
+			path: App/Core/Services/RequestThrottleService/FrontRateLimiter.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\ErrorMessageBag\\:\\:addWithParams\\(\\) should return \\$this\\(App\\\\Core\\\\Services\\\\RequestValidator\\\\ErrorMessageBag\\) but returns App\\\\Core\\\\Services\\\\RequestValidator\\\\ErrorMessageBag\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/ErrorMessageBag.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\ErrorMessageBag\\:\\:transform\\(\\) has parameter \\$messages with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/ErrorMessageBag.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\ErrorMessageBag\\:\\:transform\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/ErrorMessageBag.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractAfter\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractAfterOrEqual\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractBefore\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractBeforeOrEqual\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractBetween\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractDateEquals\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractDateFormat\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractDifferent\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractDigits\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractDigitsBetween\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractDimensions\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractGt\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractGte\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractIn\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractInArray\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractLt\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractLte\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractMax\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractMimes\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractMimetypes\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractMin\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractNotIn\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractRequiredIf\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractRequiredUnless\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractRequiredWith\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractRequiredWithAll\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractRequiredWithout\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractRequiredWithoutAll\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractSame\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractSize\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:extractStartsWith\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:makeReplacements\\(\\) has parameter \\$parameters with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(\\\\App\\\\Core\\\\Services\\\\RequestValidator\\\\ErrorMessageBag errors\\)\\: Unexpected token \"\\\\n \\* \", expected '\\(' at offset 145$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(\\\\App\\\\Core\\\\Services\\\\RequestValidator\\\\ErrorMessageBag getMessageBag\\)\\: Unexpected token \"\\\\n \", expected '\\(' at offset 222$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^PHPDoc tag @method has invalid value \\(\\\\App\\\\Core\\\\Services\\\\RequestValidator\\\\ErrorMessageBag messages\\)\\: Unexpected token \"\\\\n \\* \", expected '\\(' at offset 75$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Return type \\(array\\{message\\: string, params\\: mixed\\}\\) of method App\\\\Core\\\\Services\\\\RequestValidator\\\\Validator\\:\\:makeReplacements\\(\\) should be compatible with return type \\(string\\) of method Illuminate\\\\Validation\\\\Validator\\:\\:makeReplacements\\(\\)$#"
+			count: 1
+			path: App/Core/Services/RequestValidator/Validator.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Services\\\\ResponseManager\\\\ResponseManager\\:\\:getConfig\\(\\) has parameter \\$default with no type specified\\.$#"
+			count: 1
+			path: App/Core/Services/ResponseManager/ResponseManager.php
+
+		-
+			message: "#^Call to an undefined method App\\\\Core\\\\Values\\\\StructuredData\\\\AbstractType\\:\\:isValid\\(\\)\\.$#"
+			count: 1
+			path: App/Core/Services/StructuredDataSerializer.php
+
+		-
+			message: "#^Method App\\\\Core\\\\ValidationRules\\\\AmountRule\\:\\:__construct\\(\\) has parameter \\$currencies with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/ValidationRules/AmountRule.php
+
+		-
+			message: "#^Method App\\\\Core\\\\ValidationRules\\\\DateTimeRule\\:\\:message\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/ValidationRules/DateTimeRule.php
+
+		-
+			message: "#^Parameter \\#2 \\$message of method Illuminate\\\\Support\\\\MessageBag\\:\\:add\\(\\) expects string, App\\\\Core\\\\Values\\\\Translation given\\.$#"
+			count: 1
+			path: App/Core/ValidationRules/MultilingualArrayRule.php
+
+		-
+			message: "#^Return type \\(App\\\\Core\\\\Services\\\\RequestValidator\\\\ErrorMessageBag\\) of method App\\\\Core\\\\ValidationRules\\\\MultilingualStringRule\\:\\:message\\(\\) should be compatible with return type \\(array\\|string\\) of method Illuminate\\\\Contracts\\\\Validation\\\\Rule\\:\\:message\\(\\)$#"
+			count: 1
+			path: App/Core/ValidationRules/MultilingualStringRule.php
+
+		-
+			message: "#^Return type \\(App\\\\Core\\\\Services\\\\RequestValidator\\\\ErrorMessageBag\\) of method App\\\\Core\\\\ValidationRules\\\\UnknownFieldRule\\:\\:message\\(\\) should be compatible with return type \\(array\\|string\\) of method Illuminate\\\\Contracts\\\\Validation\\\\Rule\\:\\:message\\(\\)$#"
+			count: 1
+			path: App/Core/ValidationRules/UnknownFieldRule.php
+
+		-
+			message: "#^Class App\\\\Core\\\\Values\\\\Collections\\\\ModelCollection extends generic class Illuminate\\\\Database\\\\Eloquent\\\\Collection but does not specify its types\\: TKey, TModel$#"
+			count: 1
+			path: App/Core/Values/Collections/ModelCollection.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\Collections\\\\ModelCollection\\:\\:getModelQuery\\(\\) should return App\\\\Core\\\\Parents\\\\Queries\\\\QueryBuilder but returns Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<App\\\\Core\\\\Parents\\\\Models\\\\Model\\>\\.$#"
+			count: 1
+			path: App/Core/Values/Collections/ModelCollection.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of method Illuminate\\\\Support\\\\Collection\\<\\(int\\|string\\),Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:each\\(\\) expects callable\\(Illuminate\\\\Database\\\\Eloquent\\\\Model, int\\|string\\)\\: mixed, Closure\\(App\\\\Core\\\\Parents\\\\Models\\\\Model\\)\\: void given\\.$#"
+			count: 1
+			path: App/Core/Values/Collections/ModelCollection.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\Decimal\\:\\:checkAndNormalizeInputType\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Values/Decimal.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\Decimal\\:\\:sum\\(\\) has parameter \\$values with no value type specified in iterable type Traversable\\.$#"
+			count: 1
+			path: App/Core/Values/Decimal.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\Decimal\\:\\:sum\\(\\) has parameter \\$values with no value type specified in iterable type iterable\\<\\(int\\|string\\), mixed\\>\\.$#"
+			count: 1
+			path: App/Core/Values/Decimal.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\Decimal\\:\\:sum\\(\\) has parameter \\$values with no value type specified in iterable type iterable\\<\\(int\\|string\\), mixed\\>\\|Traversable\\.$#"
+			count: 1
+			path: App/Core/Values/Decimal.php
+
+		-
+			message: "#^Class App\\\\Core\\\\Values\\\\DynamicModelCast implements generic interface Illuminate\\\\Contracts\\\\Database\\\\Eloquent\\\\CastsAttributes but does not specify its types\\: TGet, TSet$#"
+			count: 1
+			path: App/Core/Values/DynamicModelCast.php
+
+		-
+			message: "#^Class App\\\\Core\\\\Values\\\\MonetaryAttribute extends generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Values/MonetaryAttribute.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\MonetaryAttribute\\:\\:castUsing\\(\\) has parameter \\$arguments with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: App/Core/Values/MonetaryAttribute.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\MonetaryAttribute\\:\\:keys\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Values/MonetaryAttribute.php
+
+		-
+			message: "#^Class App\\\\Core\\\\Values\\\\MultilingualAttribute extends generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Values/MultilingualAttribute.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\RelationSumDefinition\\:\\:getRelationExistenceCountQuery\\(\\) has parameter \\$parentQuery with generic class Illuminate\\\\Database\\\\Eloquent\\\\Builder but does not specify its types\\: TModelClass$#"
+			count: 1
+			path: App/Core/Values/RelationSumDefinition.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\RelationSumDefinition\\:\\:getRelationExistenceCountQuery\\(\\) has parameter \\$relation with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Relation but does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: App/Core/Values/RelationSumDefinition.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\RelationSumDefinition\\:\\:getRelationExistenceCountQuery\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Builder does not specify its types\\: TModelClass$#"
+			count: 1
+			path: App/Core/Values/RelationSumDefinition.php
+
+		-
+			message: "#^Class App\\\\Core\\\\Values\\\\ReportPayload\\\\ReportPayload implements generic interface Illuminate\\\\Contracts\\\\Support\\\\Arrayable but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Values/ReportPayload/ReportPayload.php
+
+		-
+			message: "#^Method App\\\\Core\\\\Values\\\\SortItems\\\\SortItem\\:\\:getValueResolver\\(\\) has parameter \\$data with generic class Illuminate\\\\Support\\\\Collection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: App/Core/Values/SortItems/SortItem.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: App/Core/Values/StructuredData/AbstractType.php

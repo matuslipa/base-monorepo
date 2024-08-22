@@ -1,0 +1,29 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Values\InputData;
+
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+final class {{modelSingular}}InputData
+{
+    /**
+      * @param array<string, mixed> $attributes
+      */
+    public function __construct(
+    private readonly array $attributes,
+    ) {
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function getAttributes(): array
+    {
+        return $this->attributes;
+    }
+}

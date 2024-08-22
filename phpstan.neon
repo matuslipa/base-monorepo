@@ -1,0 +1,27 @@
+includes:
+	- vendor/larastan/larastan/extension.neon
+	- phpstan-baseline.neon
+parameters:
+	level: 8
+
+	checkMissingIterableValueType: true
+	reportUnmatchedIgnoredErrors: false
+	treatPhpDocTypesAsCertain: false
+	checkOctaneCompatibility: false
+
+	parallel:
+	    maximumNumberOfProcesses: 8
+
+	paths:
+	    - ./config
+	    - ./App
+	    - ./database
+	    - ./resources/lang
+	    - ./bootstrap
+
+	excludePaths:
+	    - ./database/seeders
+	    - ./database/factories
+	    - ./database/cache
+
+	ignoreErrors:

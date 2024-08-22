@@ -1,0 +1,49 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Contracts;
+
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+use Illuminate\Support\Collection;
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+interface {{modelPlural}}RepositoryInterface
+{
+    /**
+     * @param int $id
+     *
+     * @return \App\Containers\{{containerName}}\Models\{{modelSingular}}
+     *
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     */
+    public function get(int $id): {{modelSingular}};
+
+    /**
+     * @return \Illuminate\Support\Collection<\App\Containers\{{containerName}}\Models\{{modelSingular}}>
+     */
+    public function getAll(): Collection;
+
+    /**
+     * @param mixed[] $data
+     * @return \App\Containers\{{containerName}}\Models\{{modelSingular}}
+     */
+    public function create(array $data): {{modelSingular}};
+
+    /**
+     * @param \App\Containers\{{containerName}}\Models\{{modelSingular}} ${{modelVariable}}
+     */
+    public function save({{modelSingular}} ${{modelVariable}}): void;
+
+    /**
+     * @param \App\Containers\{{containerName}}\Models\{{modelSingular}} ${{modelVariable}}
+     */
+    public function delete({{modelSingular}} ${{modelVariable}}): void;
+
+    /**
+     * @return \App\Containers\{{containerName}}\Contracts\{{modelPlural}}QueryInterface
+     */
+    public function query(): {{modelPlural}}QueryInterface;
+}

@@ -1,0 +1,12 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Queries;
+
+use App\Containers\{{containerName}}\Contracts\{{modelPlural}}QueryInterface;
+use App\Core\Parents\Queries\QueryBuilder;
+
+final class {{modelPlural}}QueryBuilder extends QueryBuilder implements {{modelPlural}}QueryInterface
+{
+}

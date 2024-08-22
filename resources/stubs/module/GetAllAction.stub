@@ -1,0 +1,40 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Actions;
+
+use App\Containers\{{containerName}}\Contracts\{{modelPlural}}QueryInterface;
+use App\Containers\{{containerName}}\Contracts\{{modelPlural}}RepositoryInterface;
+use App\Core\Parents\Actions\Action;
+use Illuminate\Support\Collection;
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+final class GetAll{{modelPlural}}Action extends Action
+{
+    /**
+     * @param \App\Containers\{{containerName}}\Contracts\{{modelPlural}}RepositoryInterface ${{collectionVariable}}Repository
+     */
+    public function __construct(
+        private readonly {{modelPlural}}RepositoryInterface ${{collectionVariable}}Repository
+    ) {
+    }
+
+    /**
+     * @return \Illuminate\Support\Collection<\App\Containers\{{containerName}}\Models\{{modelSingular}}>
+     */
+    public function run(): Collection
+    {
+        return $this->query()->getAll();
+    }
+
+    /**
+     * @return \App\Containers\{{containerName}}\Contracts\{{modelPlural}}QueryInterface
+     */
+    public function query(): {{modelPlural}}QueryInterface
+    {
+        return $this->{{collectionVariable}}Repository->query();
+    }
+}

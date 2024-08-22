@@ -1,0 +1,47 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Actions;
+
+use App\Containers\Logging\Services\AppActivityLogger;
+use App\Containers\Logging\Values\ActivityTypeEnum;
+use App\Containers\{{containerName}}\Contracts\{{modelPlural}}RepositoryInterface;
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+use App\Containers\{{containerName}}\Values\InputData\{{modelSingular}}InputData;
+use App\Core\Parents\Actions\Action;
+use Illuminate\Database\DatabaseManager;
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+final class Create{{modelSingular}}Action extends Action
+{
+    /**
+     * @param \App\Containers\{{containerName}}\Contracts\{{modelPlural}}RepositoryInterface ${{collectionVariable}}Repository
+     * @param \Illuminate\Database\DatabaseManager $databaseManager,
+     * @param \App\Containers\Logging\Services\AppActivityLogger $activityLogger
+     */
+    public function __construct(
+        private readonly {{modelPlural}}RepositoryInterface ${{collectionVariable}}Repository,
+        private readonly DatabaseManager $databaseManager,
+        private readonly AppActivityLogger $activityLogger
+    ) {
+    }
+
+    /**
+     * @param \App\Containers\{{containerName}}\Values\InputData\{{modelSingular}}InputData $data
+     *
+     * @return \App\Containers\{{containerName}}\Models\{{modelSingular}}
+     *
+     * @throws \Throwable
+     */
+    public function run({{modelSingular}}InputData $data): {{modelSingular}}
+    {
+        return $this->databaseManager->transaction(function () use ($data): {{modelSingular}} {
+            ${{modelVariable}} = $this->{{collectionVariable}}Repository->create($data->getAttributes());
+            $this->activityLogger->createForModel(${{modelVariable}}, ActivityTypeEnum::MODEL_CREATED());
+            return ${{modelVariable}};
+        });
+    }
+}

@@ -1,0 +1,7 @@
+import { Model } from '@/common/parents/model/model';
+
+export class {{modelName}}Model extends Model {
+{{attributes}}
+{{embeds}}
+{{getters}}
+}

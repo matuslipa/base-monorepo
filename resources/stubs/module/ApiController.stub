@@ -1,0 +1,148 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Controllers;
+
+use App\Containers\Authorization\Values\PermissionEnum;
+use App\Containers\{{containerName}}\Actions\Create{{modelSingular}}Action;
+use App\Containers\{{containerName}}\Actions\Delete{{modelSingular}}Action;
+use App\Containers\{{containerName}}\Actions\GetAll{{modelPlural}}Action;
+use App\Containers\{{containerName}}\Actions\Get{{modelSingular}}Action;
+use App\Containers\{{containerName}}\Actions\Update{{modelSingular}}Action;
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+use App\Containers\{{containerName}}\Requests\{{modelSingular}}RequestFilter;
+use App\Containers\{{containerName}}\Transformers\{{modelSingular}}ApiTransformer;
+use App\Core\Parents\Controllers\ApiController;
+use App\Core\Responses\ApiResponse;
+use Illuminate\Http\Request;
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+final class {{modelPlural}}ApiController extends ApiController
+{
+    /**
+     * GET: Get collection of {{modelPlural}}.
+     *
+     * @param \App\Containers\{{containerName}}\Actions\GetAll{{modelPlural}}Action $getAllAction
+     *
+     * @return \App\Core\Responses\ApiResponse
+     * @throws \App\Core\Exceptions\AuthenticationException
+     * @throws \App\Core\Exceptions\AuthorizationException
+     * @throws \App\Core\Services\ApiResponseFactory\InvalidApiResourceParametersException
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
+    public function index(GetAll{{modelPlural}}Action $getAllAction): ApiResponse
+    {
+        $this->authorize(PermissionEnum::ACCESS(), {{modelSingular}}::class);
+
+        return $this->queryResponse($getAllAction->query(), {{modelSingular}}ApiTransformer::class);
+    }
+
+    /**
+     * GET: Get single {{modelSingular}}.
+     *
+     * @param \App\Containers\{{containerName}}\Actions\Get{{modelSingular}}Action $getAction
+     * @param int|string ${{modelVariable}}Id
+     *
+     * @return \App\Core\Responses\ApiResponse
+     *
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     * @throws \App\Core\Exceptions\AuthenticationException
+     * @throws \App\Core\Exceptions\AuthorizationException
+     * @throws \App\Core\Services\ApiResponseFactory\InvalidApiResourceParametersException
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
+    public function show(Get{{modelSingular}}Action $getAction, int | string ${{modelVariable}}Id): ApiResponse
+    {
+        ${{modelVariable}} = $getAction->run((int) ${{modelVariable}}Id);
+
+        $this->authorize(PermissionEnum::READ(), ${{modelVariable}});
+
+        return $this->modelResponse(${{modelVariable}}, {{modelSingular}}ApiTransformer::class);
+    }
+
+    /**
+     * POST: Store new {{modelSingular}}.
+     *
+     * @param \App\Containers\{{containerName}}\Requests\{{modelSingular}}RequestFilter $requestFilter
+     * @param \App\Containers\{{containerName}}\Actions\Create{{modelSingular}}Action $createAction
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \App\Core\Responses\ApiResponse
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     * @throws \Throwable
+     */
+    public function store(
+        {{modelSingular}}RequestFilter $requestFilter,
+        Create{{modelSingular}}Action $createAction,
+        Request $request
+    ): ApiResponse {
+        $this->authorize(PermissionEnum::CREATE(), {{modelSingular}}::class);
+
+        $data = $requestFilter->getValidatedData($request);
+        ${{modelVariable}} = $createAction->run($data);
+
+        return $this->modelResponse(${{modelVariable}}, {{modelSingular}}ApiTransformer::class)->setStatusCode(201);
+    }
+
+    /**
+     * PUT/PATCH: Update {{modelSingular}}.
+     *
+     * @param \App\Containers\{{containerName}}\Requests\{{modelSingular}}RequestFilter $requestFilter
+     * @param \App\Containers\{{containerName}}\Actions\Get{{modelSingular}}Action $getAction,
+     * @param \App\Containers\{{containerName}}\Actions\Update{{modelSingular}}Action $updateAction
+     * @param \Illuminate\Http\Request $request
+     * @param int|string ${{modelVariable}}Id
+     *
+     * @return \App\Core\Responses\ApiResponse
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     * @throws \Throwable
+     */
+    public function update(
+        {{modelSingular}}RequestFilter $requestFilter,
+        Get{{modelSingular}}Action $getAction,
+        Update{{modelSingular}}Action $updateAction,
+        Request $request,
+        int | string ${{modelVariable}}Id
+    ): ApiResponse {
+        ${{modelVariable}} = $getAction->run((int) ${{modelVariable}}Id);
+
+        $this->authorize(PermissionEnum::UPDATE(), ${{modelVariable}});
+
+        $data = $requestFilter->getValidatedData($request, ${{modelVariable}});
+        ${{modelVariable}} = $updateAction->run(${{modelVariable}}, $data);
+
+        return $this->modelResponse(${{modelVariable}}, {{modelSingular}}ApiTransformer::class);
+    }
+
+    /**
+     * DELETE: Delete {{modelSingular}}.
+     *
+     * @param \App\Containers\{{containerName}}\Actions\Get{{modelSingular}}Action $getAction
+     * @param \App\Containers\{{containerName}}\Actions\Delete{{modelSingular}}Action $deleteAction,
+     * @param int|string ${{modelVariable}}Id
+     *
+     * @return \App\Core\Responses\ApiResponse
+     *
+     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     * @throws \Throwable
+     */
+    public function destroy(
+        Get{{modelSingular}}Action $getAction,
+        Delete{{modelSingular}}Action $deleteAction,
+        int | string ${{modelVariable}}Id
+    ): ApiResponse {
+        ${{modelVariable}} = $getAction->run((int) ${{modelVariable}}Id);
+
+        $this->authorize(PermissionEnum::DELETE(), ${{modelVariable}});
+
+        $deleteAction->run(${{modelVariable}});
+
+        return $this->emptyResponse();
+    }
+}

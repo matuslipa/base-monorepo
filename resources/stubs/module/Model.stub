@@ -1,0 +1,87 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Models;
+
+use App\Containers\{{containerName}}\Contracts\{{modelPlural}}QueryInterface;
+use App\Containers\{{containerName}}\Queries\{{modelPlural}}QueryBuilder;
+use App\Core\Parents\Models\Model;
+use App\Core\Values\Enums\CastTypesEnum;
+use Carbon\CarbonImmutable;
+
+final class {{modelSingular}} extends Model
+{
+    /**
+     * Attributes of the model.
+     */
+    public const ATTR_ID = 'id';
+
+    public const ATTR_NAME = 'name';
+
+    public const ATTR_CREATED_AT = self::CREATED_AT;
+
+    public const ATTR_UPDATED_AT = self::UPDATED_AT;
+
+    /**
+     * @inheritDoc
+     */
+    protected $fillable = [
+        self::ATTR_NAME,
+    ];
+
+    /**
+     * @inheritDoc
+     *
+     * @var array<string, mixed>
+     */
+    protected $casts = [
+        self::ATTR_NAME => CastTypesEnum::STRING,
+    ];
+
+    /**
+     * Create new model query.
+     *
+     * @return \App\Containers\{{containerName}}\Contracts\{{modelPlural}}QueryInterface
+     */
+    public function newModelQuery(): {{modelPlural}}QueryInterface
+    {
+        return (new {{modelPlural}}QueryBuilder($this))->withoutGlobalScopes();
+    }
+
+    /**
+     * Fill model with compact data.
+     *
+     * @param array<string, mixed> $data
+     */
+    public function compactFill(array $data): void
+    {
+        // place some default values?
+
+        $this->fill($data);
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->getAttributeValue(self::ATTR_NAME);
+    }
+
+    /**
+     * @return \Carbon\CarbonImmutable
+     */
+    public function getCreatedAt(): CarbonImmutable
+    {
+        return $this->getAttributeValue(self::ATTR_CREATED_AT);
+    }
+
+    /**
+     * @return \Carbon\CarbonImmutable
+     */
+    public function getUpdatedAt(): CarbonImmutable
+    {
+        return $this->getAttributeValue(self::ATTR_UPDATED_AT);
+    }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" bootstrap="vendor/autoload.php" colors="true" processIsolation="false" stopOnFailure="false" stopOnError="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.2/phpunit.xsd" cacheDirectory=".phpunit.cache" backupStaticProperties="false">
+  <testsuites>
+    <testsuite name="Containers Tests">
+      <directory suffix="Test.php">./App/Containers</directory>
+    </testsuite>
+    <testsuite name="Core Tests">
+      <directory suffix="Test.php">./App/Core</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <server name="APP_ENV" value="testing"/>
+    <server name="BCRYPT_ROUNDS" value="4"/>
+    <server name="CACHE_DRIVER" value="array"/>
+    <server name="MAIL_DRIVER" value="array"/>
+    <server name="QUEUE_CONNECTION" value="sync"/>
+    <server name="SESSION_DRIVER" value="array"/>
+    <server name="DB_DATABASE" value="test_db"/>
+    <server name="DATABASE_LOGGING" value="false"/>
+    <server name="SENTRY_DSN" value="null"/>
+    <server name="DB_USERNAME" value="root"/>
+    <server name="DB_PASSWORD" value="root"/>
+  </php>
+  <source>
+    <include>
+      <directory suffix=".php">./App</directory>
+    </include>
+    <exclude>
+      <directory suffix=".php">./App/Containers/*/Routes</directory>
+      <directory suffix=".php">./App/Containers/*/Data/Factories</directory>
+    </exclude>
+  </source>
+</phpunit>

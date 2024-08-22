@@ -1,0 +1,78 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Transformers;
+
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+use App\Core\Parents\Transformers\ApiTransformer;
+use App\Core\Values\HATEOASLink;
+use App\Core\Values\Mutators\FilterMutator;
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+final class {{modelSingular}}ApiTransformer extends ApiTransformer
+{
+    public const PROP_ID = {{modelSingular}}::ATTR_ID;
+
+    public const PROP_NAME = {{modelSingular}}::ATTR_NAME;
+
+    public const PROP_CREATED_AT = {{modelSingular}}::ATTR_CREATED_AT;
+
+    public const PROP_UPDATED_AT = {{modelSingular}}::ATTR_UPDATED_AT;
+
+    /**
+     * @param \App\Containers\{{containerName}}\Models\{{modelSingular}} ${{modelVariable}}
+     *
+     * @return mixed[]
+     */
+    public function transform({{modelSingular}} ${{modelVariable}}): array
+    {
+        return [
+            self::PROP_ID => ${{modelVariable}}->getKey(),
+            self::PROP_NAME => ${{modelVariable}}->getName(),
+            self::PROP_CREATED_AT => $this->formatDateTime(${{modelVariable}}->getCreatedAt()),
+            self::PROP_UPDATED_AT => $this->formatDateTime(${{modelVariable}}->getUpdatedAt()),
+        ];
+    }
+
+    /**
+     * Get hateoas links.
+     *
+     * @param \App\Containers\{{containerName}}\Models\{{modelSingular}} ${{modelVariable}}
+     * @return \App\Core\Values\HATEOASLink[]
+     */
+    public function hateoas({{modelSingular}} ${{modelVariable}}): array
+    {
+        return [
+            HATEOASLink::makeFromRoute('self', 'api.{{urlSlug}}.show', [${{modelVariable}}->getKey()]),
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function sortFields(): array
+    {
+        return [
+            self::PROP_ID,
+            self::PROP_NAME,
+            self::PROP_CREATED_AT,
+            self::PROP_UPDATED_AT,
+        ];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function filters(): array
+    {
+        return [
+            self::PROP_ID => FilterMutator::enum(),
+            self::PROP_NAME => FilterMutator::string(),
+            self::PROP_CREATED_AT => FilterMutator::date(),
+            self::PROP_UPDATED_AT => FilterMutator::date(),
+        ];
+    }
+}

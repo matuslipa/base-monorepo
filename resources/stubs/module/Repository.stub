@@ -1,0 +1,71 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Repositories;
+
+use App\Containers\{{containerName}}\Contracts\{{modelPlural}}QueryInterface;
+use App\Containers\{{containerName}}\Contracts\{{modelPlural}}RepositoryInterface;
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+use App\Containers\{{containerName}}\Queries\{{modelPlural}}QueryBuilder;
+use Illuminate\Support\Collection;
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+final class {{modelPlural}}Repository implements {{modelPlural}}RepositoryInterface
+{
+    /**
+     * @inheritDoc
+     */
+    public function get(int $id): {{modelSingular}}
+    {
+        /** @var \App\Containers\{{containerName}}\Models\{{modelSingular}} ${{modelVariable}} */
+        ${{modelVariable}} = $this->query()->getById($id);
+        return ${{modelVariable}};
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAll(): Collection
+    {
+        return $this->query()->getAll();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function create(array $data): {{modelSingular}}
+    {
+        ${{modelVariable}} = new {{modelSingular}}();
+        ${{modelVariable}}->compactFill($data);
+        $this->save(${{modelVariable}});
+
+        return ${{modelVariable}};
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function save({{modelSingular}} ${{modelVariable}}): void
+    {
+        ${{modelVariable}}->save();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function delete({{modelSingular}} ${{modelVariable}}): void
+    {
+        ${{modelVariable}}->delete();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function query(): {{modelPlural}}QueryInterface
+    {
+        return new {{modelPlural}}QueryBuilder(new {{modelSingular}}());
+    }
+}

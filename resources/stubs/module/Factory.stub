@@ -1,0 +1,26 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Database\Factories\{{containerName}};
+
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+final class {{modelSingular}}Factory extends Factory
+{
+    /**
+     * @var class-string<\App\Core\Parents\Models\Model>
+     */
+    protected $model = {{modelSingular}}::class;
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            {{definitions}}
+        ];
+    }
+}

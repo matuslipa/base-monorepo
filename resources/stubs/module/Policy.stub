@@ -1,0 +1,82 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Containers\{{containerName}}\Policies;
+
+use App\Containers\Authorization\Services\PermissionsService;
+use App\Containers\Modules\Values\ModuleDefinitions;
+use App\Containers\{{containerName}}\Models\{{modelSingular}};
+use App\Core\Parents\Policies\Policy;
+use Illuminate\Contracts\Auth\Authenticatable;
+
+/**
+ * @package App\Containers\{{containerName}}
+ */
+final class {{modelPlural}}Policy extends Policy
+{
+    /**
+     * @param \App\Containers\Authorization\Services\PermissionsService $permissionsService
+     */
+    public function __construct(
+        private readonly PermissionsService $permissionsService
+    ) {
+    }
+
+   /**
+    * @param \Illuminate\Contracts\Auth\Authenticatable|null $user
+     * @param \App\Containers\{{containerName}}\Models\{{modelSingular}}|null ${{modelVariable}}
+    *
+    * @return bool
+    * @throws \App\Core\Exceptions\AuthenticationException
+    */
+    public function access(?Authenticatable $user, ?{{modelSingular}} ${{modelVariable}} = null): bool
+    {
+        return ! ${{modelVariable}} || $this->read();
+    }
+
+    /**
+     * @return bool
+     * @throws \App\Core\Exceptions\AuthenticationException
+     */
+    public function read(): bool
+    {
+        return $this->permissionsService->canReadModule(ModuleDefinitions::{{containerNameCamelCase}}());
+    }
+
+    /**
+     * @return bool
+     * @throws \App\Core\Exceptions\AuthenticationException
+     */
+    public function create(): bool
+    {
+        return $this->permissionsService->canCreateInModule(ModuleDefinitions::{{containerNameCamelCase}}());
+    }
+
+    /**
+     * @return bool
+     * @throws \App\Core\Exceptions\AuthenticationException
+     */
+    public function update(): bool
+    {
+        return $this->permissionsService->canUpdateInModule(ModuleDefinitions::{{containerNameCamelCase}}());
+    }
+
+    /**
+     * @return bool
+     * @throws \App\Core\Exceptions\AuthenticationException
+     */
+    public function delete(): bool
+    {
+        return $this->permissionsService->canDeleteInModule(ModuleDefinitions::{{containerNameCamelCase}}());
+    }
+
+    /**
+     * @return bool
+     * @throws \App\Core\Exceptions\AuthenticationException
+     */
+    public function full(): bool
+    {
+        return $this->create() && $this->update() && $this->delete();
+    }
+}
