@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use App\Core\Application;
-use App\Core\Controllers\FallbackApiController;
 use App\Core\Middlewares\ThrottleRequestsMiddleware;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -47,11 +46,6 @@ $app = Application::configure(basePath: dirname(__DIR__))
         web: __DIR__ . '/../routes/web.php',
         api: __DIR__ . '/../routes/api-v0.php',
         health: '/up',
-        then: static function (): void {
-            Route::any('{fallbackPlaceholder}', [
-                'uses' => FallbackApiController::class . '@show',
-            ])->where('fallbackPlaceholder', '.*')->fallback();
-        }
     )
     ->withMiddleware(static function (Middleware $middleware) use (&$middlewareAliases, &$middlewareGroups): void {
         $middleware->use([
