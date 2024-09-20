@@ -44,7 +44,7 @@ final class CreateUserAction extends Action
             $attributes[User::ATTR_PASSWORD] = $this->hasher->make($attributes[User::ATTR_PASSWORD]);
         }
 
-        return $this->databaseManager->transaction(function () use ($attributes, $data): User {
+        return $this->databaseManager->transaction(function () use ($attributes): User {
             return $this->usersRepository->create($attributes);
         });
     }

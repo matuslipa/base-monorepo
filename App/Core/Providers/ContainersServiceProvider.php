@@ -18,9 +18,9 @@ final class ContainersServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->registerAuthContainer();
-
         $this->registerUsersContainer();
+
+        $this->registerPatientsContainer();
     }
 
     private function registerUsersContainer(): void
@@ -31,15 +31,11 @@ final class ContainersServiceProvider extends ServiceProvider
         );
     }
 
-    private function registerAuthContainer(): void
+    private function registerPatientsContainer(): void
     {
         $this->app->bind(
-            \App\Containers\Authentication\Contracts\UserTokensRepositoryInterface::class,
-            \App\Containers\Authentication\Repositories\UserTokensRepository::class
-        );
-        $this->app->bind(
-            \App\Containers\Authentication\Contracts\UserSessionsRepositoryInterface::class,
-            \App\Containers\Authentication\Repositories\UserSessionsRepository::class
+            \App\Containers\Patients\Contracts\PatientsRepositoryInterface::class,
+            \App\Containers\Patients\Repositories\PatientsRepository::class
         );
     }
 }

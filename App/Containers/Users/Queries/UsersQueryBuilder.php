@@ -36,16 +36,4 @@ final class UsersQueryBuilder extends QueryBuilder implements UsersQueryInterfac
     {
         return $this->where(User::ATTR_PASSWORD_EXPIRATION_ENABLED, '=', $enabled);
     }
-
-    /**
-     * @inheritDoc
-     */
-    public function whereHavingRole(int $roleId): self
-    {
-        $this->whereHas(User::RELATION_ROLES, static function (Builder $query) use ($roleId): void {
-            $query->whereKey($roleId);
-        });
-
-        return $this;
-    }
 }
